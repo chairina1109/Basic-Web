@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Home Screen
+	</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<!-- top navigation -->
+	<ul class="topNav">
+		<li><a href="#Home">Home</a></li>
+		<li><a href="#Who">Who We Are</a></li>
+		<li><a href="#Why">Why We Are</a></li>
+		<li><a href="#Clients">Our Clients</a></li>
+		<li class="contact"><a href="#Contact">Contact Us</a></li>
+	</ul>
+
+	<!-- slideshow/carousel -->
+	<div class="slideshow-container" id="Home">
+
+	<div class="mySlides fade">
+	  <img src="./assets/img1.png" style="width:100%">
+	  <div class="text">Get Updated with Web Development</div>
+	</div>
+
+	<div class="mySlides fade">
+	  <img src="./assets/img2.png" style="width:100%">
+	  <div class="text">Connect All Devices with Us</div>
+	</div>
+
+	<div class="mySlides fade">
+	  <img src="./assets/img3.png" style="width:100%">
+	  <div class="text">Leading Innovation</div>
+	</div>
+
+	</div>
+	<br>
+
+	<div style="text-align:center">
+	  <span class="dot"></span> 
+	  <span class="dot"></span> 
+	  <span class="dot"></span> 
+	</div>
+
+	<!-- news -->
+	<div class="newsborder">
+		<h3 class="title">
+			Lorem Ipsum
+			<p class="newsbody">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae fringilla ex. Duis ornare est et mollis vulputate. Nulla facilisi. Sed et lobortis magna. Nunc magna diam, ultricies a pretium nec, luctus et lorem. Donec at tempor nibh. Donec velit orci, congue aliquet diam at, ornare blandit nunc. Nulla vulputate elit nec erat viverra tempor.
+			</p>
+		</h3>
+		<h3 class="title">
+			Lorem Ipsum
+			<p class="newsbody">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae fringilla ex. Duis ornare est et mollis vulputate. Nulla facilisi. Sed et lobortis magna. Nunc magna diam, ultricies a pretium nec, luctus et lorem. Donec at tempor nibh. Donec velit orci, congue aliquet diam at, ornare blandit nunc. Nulla vulputate elit nec erat viverra tempor.
+			</p>
+		</h3>
+	</div>
+
+	<!-- newsletter -->
+	<form>
+	  <div class="nl">
+	    <h2>Subscribe to our Newsletter</h2>
+	  </div>
+
+	  <div class="nl" style="background-color:white">
+	    <input type="text" placeholder="Name" name="name" required>
+	    <input type="text" placeholder="Email address" name="mail" required>
+	    <label>
+	      <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+	    </label>
+	  </div>
+
+	  <button class="nl">Submit</button>
+	</form>
+	
+
+	<script type="text/javascript">
+		var slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("dot");
+		  for (i = 0; i < slides.length; i++) {
+		    slides[i].style.display = "none";  
+		  }
+		  slideIndex++;
+		  if (slideIndex > slides.length) {slideIndex = 1}    
+		  for (i = 0; i < dots.length; i++) {
+		    dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		  setTimeout(showSlides, 3000); // Change image every 2 seconds
+		}
+	</script>
+
+
+</body>
+</html>
